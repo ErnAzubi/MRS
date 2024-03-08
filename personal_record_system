@@ -1,0 +1,7 @@
+sudo useradd -m personaluser
+sudo passwd personaluser
+mkdir -p ~/Personal_Record_System/{credentials/{usernames.txt,passwords.txt,email_addresses.txt},notes/{personal_notes.txt,important_dates.txt},backups}
+chmod 700 ~/Personal_Record_System/credentials/{usernames.txt,passwords.txt,email_addresses.txt}
+chmod 600 ~/Personal_Record_System/notes/{personal_notes.txt,important_dates.txt}
+cd ~/Personal_Record_System/backups
+zip -r backup_$(date +"%Y-%m-%d").zip ~/Personal_Record_System
